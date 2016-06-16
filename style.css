@@ -3,16 +3,16 @@
 @import url(http://fonts.googleapis.com/css?family=Francois+One);
 
 /*------STYLE-------*/
-p{
-	line-height: 20px;
-}
-
-
 body,html{
 	background: white;
 	margin-top: 30px;
 	height: 100%;
 	-webkit-font-smoothing: antialiased;
+}
+
+p{
+	font-size: 16px;
+	line-height: 30px;
 }
 
 /*HEADER*/
@@ -30,7 +30,7 @@ header{
 
 #menu-header li{
 	display: inline-block;
-	padding: 0px 10px;
+	padding: 0px 15px;
 	text-transform: uppercase;
 	font-weight: 700;
 }
@@ -219,6 +219,7 @@ div.parallax-container {
 	font-size: 16px;
 	padding: 30px 0;
 	text-align: center;
+	background: #e8e8e8;
 }
 
 #content-contato h1{
