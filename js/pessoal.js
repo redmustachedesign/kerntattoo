@@ -1,49 +1,62 @@
 //Meu código de JQuery Pessoal
 $(document).ready(function(){
+	var smartphoneScreen = $(window).width()<=767;
+	if (smartphoneScreen) {
+		$('#menu-social-header').removeClass('pull-right');
+	} else{
+		// NADA
+	};
 	$('.parallax-container').jKit('parallax',{
 		'strength': '1',
 		'axis': 'both',
 		'scope': 'local',
 		'detect':'scroll'
 	});
-//--------------------------------------------------TUDO REFERENTE AO FAUX-MENU-----//
-	$(window).scroll(function(){
-		if($(this).scrollTop() > 321){
-			$('#subtitle-logo').slideUp("slow");
-		} else{
-			$('#subtitle-logo').slideDown("slow");
-		}
-		return false;
-			});
-// ------------------------------------------------- BX SLIDER ----------//
-	$('.bxslider').bxSlider({
-		mode:'fade',
-		controls: false,
-		auto: true
-	});
-//--------------------------------------------------TUDO REFERENTE AO FAUX-MENU CLICK-----//
+//--------TUDO REFERENTE AO FAUX-MENU CLICK-----//
 	$("#home").click(function(){
+		if (smartphoneScreen) {
 			$('body,html').animate({
-				scrollTop: $("#header-logo").offset().top-155
-			}, 1500,"easeInOutQuint");
+				scrollTop: $("#header-logo").offset().top -190
+			}, 1500, "easeInOutQuint",function(){
+				$('#menu-header').slideUp(400);
+			});
 			return false;
-		});
+		} else{
+			$('body,html').animate({
+				scrollTop: $("#header-logo").offset().top -100
+			}, 1500, "easeInOutQuint");
+			return false;
+		};
+	});
 
 	$("#menu-tatuagens").click(function(){
-		$('body,html').animate({
+		if (smartphoneScreen) {
+			$('body,html').animate({
+				scrollTop: $("#content-tattoo").offset().top -190
+			}, 1500, "easeInOutQuint",function(){
+				$('#menu-header').slideUp(400);
+			});
+			return false;
+		} else{
+			$('body,html').animate({
 				scrollTop: $("#content-tattoo").offset().top -100
 			}, 1500, "easeInOutQuint");
 			return false;
+		};
+	});
+
+	$("#menu-tatuagens")
+		.on('mouseenter', function(event) {
+				if (!smartphoneScreen) {
+					$(".submenu-tatuador").slideDown(300);
+				} else{
+					// NADA
+				};
+			})
+		.on('mouseleave', function(event) {
+			$(this).stop();
+			$(".submenu-tatuador").slideUp(300);
 		});
-
-	$('#menu-tatuagens').mouseenter(function(event) {
-		$(".submenu-tatuador").slideDown(300);
-	});
-
-	$('#menu-tatuagens').mouseleave(function(event) {
-		$(this).stop();
-		$(".submenu-tatuador").slideUp(300);
-	});
 
 	$("#sub-kern").click(function(){
 		$('body,html').animate({
@@ -53,20 +66,33 @@ $(document).ready(function(){
 		});
 
 	$("#menu-piercing").click(function(){
-		$('body,html').animate({
+		if (smartphoneScreen) {
+			$('body,html').animate({
+				scrollTop: $("#content-piercing").offset().top -190
+			}, 1500, "easeInOutQuint",function(){
+				$('#menu-header').slideUp(400);
+			});
+			return false;
+		} else{
+			$('body,html').animate({
 				scrollTop: $("#content-piercing").offset().top -100
 			}, 1500, "easeInOutQuint");
 			return false;
+		};
+	});
+
+	$("#menu-piercing")
+		.on('mouseenter', function(event) {
+				if (!smartphoneScreen) {
+					$(".submenu-piercing").slideDown(300);
+				} else{
+					// NADA
+				};
+			})
+		.on('mouseleave', function(event) {
+			$(this).stop();
+			$(".submenu-piercing").slideUp(300);
 		});
-
-	$('#menu-piercing').mouseenter(function(event) {
-		$(".submenu-piercing").slideDown(300);
-	});
-
-	$('#menu-piercing').mouseleave(function(event) {
-		$(this).stop();
-		$(".submenu-piercing").slideUp(300);
-	});
 
 	$("#sub-simara").click(function(){
 		$('body,html').animate({
@@ -75,22 +101,39 @@ $(document).ready(function(){
 			return false;
 		});
 
-// ------------------ FUNCTION MAPS ----------//
-	var mapOptions = {
-		zoom: 10,
-		mapTypeId: google.maps.MapTypeId.SATELLITE,
-		scrollwheel: false
-	}
+	$("#menu-makeup").click(function(){
+		if (smartphoneScreen) {
+			$('body,html').animate({
+				scrollTop: $("#content-makeup").offset().top -190
+			}, 1500, "easeInOutQuint",function(){
+				$('#menu-header').slideUp(400);
+			});
+			return false;
+		} else{
+			$('body,html').animate({
+				scrollTop: $("#content-makeup").offset().top -100
+			}, 1500, "easeInOutQuint");
+			return false;
+		};
+	});
 
-	map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-// -------------- INSTAFEED --------------//
-    var feed = new Instafeed({
-        get: 'tagged',
-        tagName: 'awesome',
-        clientId: 'YOUR_CLIENT_ID'
-    });
-
-    feed.run();
-
+	$("#menu-contato").click(function(){
+		if (smartphoneScreen) {
+			$('body,html').animate({
+				scrollTop: $("#content-contato").offset().top -190
+			}, 1500, "easeInOutQuint",function(){
+				$('#menu-header').slideUp(400);
+			});
+			return false;
+		} else{
+			$('body,html').animate({
+				scrollTop: $("#content-contato").offset().top -100
+			}, 1500, "easeInOutQuint");
+			return false;
+		};
+	});
+	// HAMBURGER ICON
+	$('#hamburger-icon').click(function(){
+		$('#menu-header').slideToggle(400);
+	});
 });

@@ -9,10 +9,19 @@ p{
 	font-size: 16px;
 	line-height: 30px;
 }
+h1{
+	font-family: 'Francois One', sans-serif;
+	text-transform: uppercase;
+	font-size: 70px;
+	margin-top: 40px;
+}
 /*HEADER*/
 header{
 	padding: 20px 0px 0px 0px;
 	background: black;
+}
+#hamburger-icon{
+	display: none;
 }
 
 #menu-header{
@@ -112,7 +121,7 @@ div.parallax-container {
 
 /*---------- CONTENT-TATTOO ---------------*/
 #content-tattoo{
-	min-height: 550px;
+	min-height: 600px;
 	background-image: url(images/content-tattoo.png);
 	background-color: #20252b;
 	background-position: center;
@@ -124,24 +133,11 @@ div.parallax-container {
 	padding: 10% 0;
 }
 
-#content-tattoo h1{
-	font-family: 'Francois One', sans-serif;
-	text-transform: uppercase;
-	font-size: 70px;
-	margin-top: 40px;
-}
 
 /*---------- CONTENT-DANIEL ---------------*/
 #content-daniel{
 	min-height: 570px;
 	padding-top: 20px;
-}
-
-#content-daniel h1{
-	font-family: 'Francois One', sans-serif;
-	text-transform: uppercase;
-	font-size: 70px;
-	margin-top: 40px;
 }
 
 #content-daniel span{
@@ -154,7 +150,7 @@ div.parallax-container {
 
 /*---------- CONTENT-PIERCING ---------------*/
 #content-piercing{
-	min-height: 550px;
+	min-height: 600px;
 	background-image: url(images/content-piercing.png);
 	background-color: #ce1c1d;
 	background-position: left;
@@ -166,23 +162,10 @@ div.parallax-container {
 	padding: 10% 0;
 }
 
-#content-piercing h1{
-	font-family: 'Francois One', sans-serif;
-	text-transform: uppercase;
-	font-size: 70px;
-}
-
 /*---------- CONTENT-SIMARA ---------------*/
 #content-simara{
 	min-height: 570px;
 	padding-top: 20px;
-}
-
-#content-simara h1{
-	font-family: 'Francois One', sans-serif;
-	text-transform: uppercase;
-	font-size: 70px;
-	margin-top: 40px;
 }
 
 #content-simara span{
@@ -191,7 +174,7 @@ div.parallax-container {
 
 /*---------- CONTENT-MAKEUP ---------------*/
 #content-makeup{
-	min-height: 550px;
+	min-height: 600px;
 	padding: 10% 0;
 	background-image: url(images/content-makeup.png);
 	background-attachment: fixed;
@@ -216,12 +199,6 @@ div.parallax-container {
 	background: #e8e8e8;
 }
 
-#content-contato h1{
-	font-family: 'Francois One', sans-serif;
-	text-transform: uppercase;
-	font-size: 70px;
-}
-
 #form-contato input{
 	padding: 20px 15px;
 	margin: 15px 0px;
@@ -233,7 +210,7 @@ div.parallax-container {
 	height: 300px;
 }
 
-/*--------- FOOTER --------------------------*/
+/* FOOTER --------------------------*/
 footer{
 	text-align: center;
 	background: #b92826;
@@ -245,5 +222,74 @@ footer a{
 	color: white;
 }
 
-/*---------------------- SMARTPHONE ---------------------*/
+/*TABLET PAISAGEM*/
+@media (max-width: 991px) {
+
+}
+
+/*TABLET RETRATO*/
+@media (max-width: 768px) {
+
+}
+
+/*CELULAR PAISAGEM*/
+@media (max-width: 767px) {
+
+}
+
+/*CELULAR RETRATO*/
+@media (max-width: 479px) {
+	h1{
+		font-size: 50px;
+	}
+	#logo-header{
+		text-align: center;
+	}
+	#hamburger-icon{
+		color: white;
+		font-size: 30px;
+		display: block;
+	}
+	#menu-header{
+		display: none;
+	}
+	#menu-header ul{
+		padding: 0px;
+	}
+	#menu-header li{
+		display: block;
+	}
+	/*HEADER*/
+	#header-logo{
+		min-height: 100%;
+		background-position: left;
+	}
+	.logo-kern{
+		background-size: 100%;
+		background-position: 0 60%;
+	}
+	/*TATTOO*/
+	#content-tattoo{
+		min-height: 400px;
+		background-position: -530px 90px;
+	}
+	/*PIERCING*/
+	#content-piercing{
+		min-height: 400px;
+		background-position: -230px 68px;
+		text-align: left;
+	}
+	/*MAKE UP*/
+	#content-makeup{
+		min-height: 400px;
+		background-position: -500px 40px;
+	}
+	/*GERAL*/
+	.img-abertura{
+		height: 240px;
+	}
+	.portifolio{
+		margin-top: 20px;
+	}
+}
 
