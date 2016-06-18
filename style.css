@@ -271,18 +271,21 @@ footer a{
 	/*TATTOO*/
 	#content-tattoo{
 		min-height: 400px;
-		background-position: -530px 90px;
+		background-position: -180px;
+		background-attachment: inherit;
 	}
 	/*PIERCING*/
 	#content-piercing{
 		min-height: 400px;
-		background-position: -230px 68px;
+		background-position: -180px;
+		background-attachment: inherit;
 		text-align: left;
 	}
 	/*MAKE UP*/
 	#content-makeup{
 		min-height: 400px;
-		background-position: -500px 40px;
+		background-position: -425px;
+		background-attachment: inherit;
 	}
 	/*GERAL*/
 	.img-abertura{
